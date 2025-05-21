@@ -105,17 +105,3 @@ Don’t forget playwright install
 
 ---
 
-### 📌 Next Steps
-
-1. Save this as `README.md` in your repo root.
-2. Commit and push.
-
-```bash
-
-git add README.md
-git commit -m "Add full setup guide for Web UI"
-git push origin main
-
-That’ll render beautifully on GitHub.
-
-Let me know if you want me to add collapsible sections, emojis, or GitHub badges for polish.

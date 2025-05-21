@@ -1,99 +1,121 @@
-Web UI Setup Guide (Browser-Use Project)
-This document provides a complete, step-by-step guide to setting up and running the browser-use/web-ui project locally.
+✅ Enhanced GitHub-Friendly Markdown Version (README.md)
+md
+Copy
+Edit
+# Web UI Setup Guide (Browser-Use Project)
 
-✅ Prerequisites
-1. OS: Linux (Tested on Ubuntu-based system)
-2. Required Python Version
-Python 3.11 (Recommended)
+This document provides a complete, step-by-step guide to setting up and running the `browser-use/web-ui` project locally.
 
-If you don’t have Python 3.11:
-sudo apt update 
+---
+
+## ✅ Prerequisites
+
+**OS:** Linux (tested on Ubuntu-based system)  
+**Python Version:** 3.11 (recommended)
+
+### Install Python 3.11
+
+```bash
+sudo apt update
 sudo apt install software-properties-common
-sudo add-apt-repository ppa:deadsnakes/ppa 
-sudo apt update 
-sudo apt install python3.11 
-python3.11-venv python3.11-dev
-
-Then set it as default:
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.11 python3.11-venv python3.11-dev
+Set Python 3.11 as default
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
-
-
-
-
-
 
 🔧 Project Setup Steps
 1. Clone the Repository
 git clone https://github.com/browser-use/web-ui.git
 cd web-ui
+2. Create and Activate Virtual Environment
+Option A: Traditional venv
 
-2. Create and Activate Virtual Environment (if not using uv)
 python3.11 -m venv .venv
 source .venv/bin/activate
+Option B: Using uv (recommended)
 
-If using uv (recommended) :- 
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv venv --python 3.11
 source .venv/bin/activate
-
-
 3. Install Python Dependencies
+
 uv pip install -r requirements.txt
+If you face missing packages:
 
-If you see missing packages, install manually:
+
 pip install gradio python-dotenv browser-use
-
 4. Install Playwright Browsers
+Install all:
+
+
 playwright install
+Or only Chromium:
 
-Or just install Chromium:
+
 playwright install chromium
-
-5. No Need to Create or setup .env File
-
+5. Skip .env File Setup
+No .env setup is needed for this project.
 
 🧪 Run the Web UI
 python webui.py --ip 127.0.0.1 --port 7788
+Open your browser at:
+http://127.0.0.1:7788
 
-Then open your browser and go to: http://127.0.0.1:7788
+⚙️ Configuring the Web UI
+In the LLM Provider dropdown, select: gemini/google
 
-After Opening the Web UI application in the browser :- 
- 
-In the LLM Provider Select :- gemini/google
-Model Name :- gemini-2.0-flash
+Set Model Name to: gemini-2.0-flash
 
+For the API Key:
 
+Go to Google → Search “Gemini API Key”
 
-Then For the API Key go to Browser and Search For Gemini API Key :-
- Go for Google AI Studio > Get API Key > Create API key > Gemini API 
-Then Select the generated API key and paste in the Web UI API key Section
+Open Google AI Studio
 
+Click Get API Key > Create API Key > Gemini API
 
+Copy and paste the key into the Web UI
 
-Now in the Web-Ui application > Browser Settings > Use Own Browser 
+🧠 Using Your Own Browser
+In the Web UI:
 
-Now then Go to Run Agent :- 
- 
-Write your desired prompt that you want it to be done by the AI  and then Click Submit Task button.
+Navigate to Browser Settings
 
-You have successfully Integrated the AI in your Browser      
+Enable Use Own Browser
 
+Then:
 
+Go to Run Agent
 
+Enter your prompt
 
+Click Submit Task
+
+🎉 You’ve successfully integrated Gemini AI into your browser!
 
 📝 Final Notes
-Use Python 3.11 as tested for compatibility.
+Use Python 3.11 for compatibility
 
+Activate .venv every session
 
-Activate .venv every session.
+Stick to supported models
 
+Don’t forget playwright install
 
-Use only supported models for browser agents.
+---
 
+### 📌 Next Steps
 
-Playwright must have browsers installed (playwright install).
+1. Save this as `README.md` in your repo root.
+2. Commit and push.
 
+```bash
 
+git add README.md
+git commit -m "Add full setup guide for Web UI"
+git push origin main
 
+That’ll render beautifully on GitHub.
 
+Let me know if you want me to add collapsible sections, emojis, or GitHub badges for polish.

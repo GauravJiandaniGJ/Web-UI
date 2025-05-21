@@ -15,14 +15,12 @@ This document provides a complete, step-by-step guide to setting up and running 
 
 ### Install Python 3.11
 
-```bash
 sudo apt update
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.11 python3.11-venv python3.11-dev
-Set Python 3.11 as default
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
+
 
 🔧 Project Setup Steps
 1. Clone the Repository

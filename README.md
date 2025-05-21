@@ -19,7 +19,7 @@ sudo apt update
 sudo apt install python3.11 python3.11-venv python3.11-dev
 
 🔹 Set Python 3.11 as Default
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
 
 🔧 Project Setup Steps
 
@@ -46,6 +46,11 @@ pip install gradio python-dotenv browser-use
 4. Install Playwright Browsers
 Install all browsers:
 playwright install
+
+If any error :- 
+
+sudo $(python -m playwright install-deps)
+
 
 Or just install Chromium:
 playwright install chromium

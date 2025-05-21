@@ -18,60 +18,39 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.11 python3.11-venv python3.11-dev
 🔹 Set Python 3.11 as Default
-bash
-Copy
+
 Edit
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
 🔧 Project Setup Steps
 1. Clone the Repository
-bash
-Copy
-Edit
 git clone https://github.com/browser-use/web-ui.git
 cd web-ui
+
 2. Create and Activate Virtual Environment
 Option A: Traditional venv
-bash
-Copy
-Edit
 python3.11 -m venv .venv
 source .venv/bin/activate
 Option B: Using uv (Recommended)
-bash
-Copy
-Edit
+
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv venv --python 3.11
 source .venv/bin/activate
 3. Install Python Dependencies
-bash
-Copy
-Edit
+
 uv pip install -r requirements.txt
 If you see missing packages, install manually:
 
-bash
-Copy
-Edit
 pip install gradio python-dotenv browser-use
 4. Install Playwright Browsers
 Install all browsers:
 
-bash
-Copy
-Edit
 playwright install
 Or just install Chromium:
 
-bash
-Copy
-Edit
 playwright install chromium
 5. No Need to Create or Configure .env File
 🧪 Run the Web UI
-bash
-Copy
-Edit
+
 python webui.py --ip 127.0.0.1 --port 7788
 Open your browser and go to:
 http://127.0.0.1:7788

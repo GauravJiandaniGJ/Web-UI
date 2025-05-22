@@ -66,7 +66,7 @@ http://127.0.0.1:7788
 
 In the LLM Provider dropdown, select: gemini/google
 
-Set Model Name to: gemini-2.0-flash
+Set Model Name to: gemini-2.0-flash-exp
 
 For the API Key:
 
